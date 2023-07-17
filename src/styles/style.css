@@ -1,0 +1,76 @@
+body {
+    overflow: hidden;
+}
+
+.recipe-list-container {
+    overflow: auto;
+    max-height: calc(100vh - 40px);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.recipe-item-link {
+    text-decoration: none;
+}
+
+.recipe-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.recipe-item:hover {
+    background-color: #eaeaea;
+}
+
+.recipe-item.selected {
+    background-color: #f5cfd2;
+    border-color: #f38185;
+}
+
+.recipe-item h3 {
+    margin-top: 0;
+}
+
+.recipe-item p {
+    margin-bottom: 0;
+}
+
+.delete-selected-container {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-selected-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete-selected-button:hover {
+    background-color: #ff3333;
+}
+
+.deleting-message {
+    margin-left: 10px;
+    font-style: italic;
+    color: #999;
+}
